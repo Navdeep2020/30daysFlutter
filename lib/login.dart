@@ -6,9 +6,54 @@ class Login extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Material(
-      child: Center(
-        child: Text("Login page"),
-      ),
+      color: Colors.white,
+      child: Column (
+        children: [
+          Image.asset(
+            "assets/images/flutter_login.png",
+            fit: BoxFit.cover,
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            Text(
+              "Welcome",
+              style: TextStyle(
+                fontSize: 22,
+                fontWeight: FontWeight.bold
+              ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Column(
+                  children: [
+                    TextFormField(
+                      decoration: InputDecoration(
+                        hintText: "Enter username",
+                        labelText: "Username"
+                      ),
+                    ),
+                    TextFormField(
+                      obscureText: true,
+                      decoration: InputDecoration(
+                        hintText: "Enter password",
+                        labelText: "Password"
+                      ),
+                    ),
+                    SizedBox(
+                      height: 22,
+                    ),
+                    ElevatedButton(
+                      onPressed: () {
+                        print("Hi navdeep");
+                      },
+                       child: Text(
+                        "Login")
+                    )
+                  ],
+                ),
+              )
+      ],)
     );
   }
 }
