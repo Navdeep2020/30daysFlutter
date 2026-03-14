@@ -5,17 +5,17 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final int days = 30;
+    const int days = 30;
 
     return Scaffold(
       appBar: AppBar(
-        title: Text("Heading"),
+        title: const Text("Heading"),
         backgroundColor: Colors.blue,
       ),
       body: Center(
           child: Container(
               child: Text("Welcome to learning flutter in $days dayss"))),
-      drawer: Drawer(),
+      drawer: const Drawer(),
     );
   }
 }

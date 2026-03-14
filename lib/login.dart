@@ -7,53 +7,58 @@ class Login extends StatelessWidget {
   Widget build(BuildContext context) {
     return Material(
       color: Colors.white,
-      child: Column (
-        children: [
-          Image.asset(
-            "assets/images/flutter_login.png",
-            fit: BoxFit.cover,
-            ),
-            SizedBox(
-              height: 20,
-            ),
-            Text(
-              "Welcome",
-              style: TextStyle(
-                fontSize: 22,
-                fontWeight: FontWeight.bold
-              ),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Column(
-                  children: [
-                    TextFormField(
-                      decoration: InputDecoration(
-                        hintText: "Enter username",
-                        labelText: "Username"
-                      ),
-                    ),
-                    TextFormField(
-                      obscureText: true,
-                      decoration: InputDecoration(
-                        hintText: "Enter password",
-                        labelText: "Password"
-                      ),
-                    ),
-                    SizedBox(
-                      height: 22,
-                    ),
-                    ElevatedButton(
-                      onPressed: () {
-                        print("Hi navdeep");
-                      },
-                       child: Text(
-                        "Login")
-                    )
-                  ],
-                ),
+      child: SingleChildScrollView(
+        child: Column (
+          children: [
+            Padding(
+              padding: EdgeInsets.all(10) ,
+              child: Image.asset(
+              "assets/images/flutter_login.png",
+              fit: BoxFit.cover,
               )
-      ],)
+            ),
+              const SizedBox(
+                height: 20,
+              ),
+              const Text(
+                "Welcome",
+                style: TextStyle(
+                  fontSize: 22,
+                  fontWeight: FontWeight.bold
+                ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Column(
+                    children: [
+                      TextFormField(
+                        decoration: const InputDecoration(
+                          hintText: "Enter username",
+                          labelText: "Username"
+                        ),
+                      ),
+                      TextFormField(
+                        obscureText: false,
+                        decoration: const InputDecoration(
+                          hintText: "Enter password",
+                          labelText: "Password"
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 22,
+                      ),
+                      ElevatedButton(
+                        onPressed: () {
+                          print("Hi navdeep");
+                        },
+                         child: const Text(
+                          "Login")
+                      )
+                    ],
+                  ),
+                )
+        ],),
+      )
     );
   }
 }
